@@ -1,5 +1,6 @@
 from data import MENU
 from data import resources
+
 #function to print report
 def printReport():
     print(f"Water: {resources['water']}ml")
@@ -7,7 +8,6 @@ def printReport():
     print(f"Coffee: {resources['coffee']}g")
     print(f"Money: ${resources['money']}")
     
-
 
 #function to check resources
 def checkResources(coffee):
@@ -20,7 +20,6 @@ def checkResources(coffee):
     else:
         return 0
     
-
 #function to process coins
 def processCoins(quarters, dimes, nickels, pennies):
     return (0.25 * quarters) + (0.1 * dimes) + (0.05 * nickels) + (0.01 * pennies)
