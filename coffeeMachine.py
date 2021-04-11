@@ -54,22 +54,20 @@ def startMachine():
     userInput = input("What would you like? (espresso/latte/cappuccino): ").lower()
     
     while userInput != "off": 
-        if userInput == "espresso":
+        if userInput == "espresso" or userInput == "latte" or userInput == "cappuccino":
             coffeeType = userInput
-        elif userInput == "latte":
-            coffeeType = userInput
-        elif userInput == "cappuccino":
-            coffeeType = userInput
+            print("Please insert coins.")
+            quarter = int(input("How many quarters?: "))
+            dime = int(input("How many dimes?: "))
+            nickle = int(input("How many nickels?: "))
+            penny = int(input("How many pennies?: "))
+            amount  = processCoins(quarter, dime, nickle, penny)
+            makeCoffee(coffeeType, amount)
         elif userInput == "report":
             printReport()
             continue
-        print("Please insert coins.")
-        quarter = int(input("How many quarters?: "))
-        dime = int(input("How many dimes?: "))
-        nickle = int(input("How many nickels?: "))
-        penny = int(input("How many pennies?: "))
-        amount  = processCoins(quarter, dime, nickle, penny)
-        makeCoffee(coffeeType, amount)
         userInput = input("What would you like? (espresso/latte/cappuccino): ").lower()
-                
-startMachine()
+            
+            
+if __name__ == "__main__":   
+    startMachine()
