@@ -64,8 +64,7 @@ def startMachine():
             amount  = processCoins(quarter, dime, nickle, penny)
             makeCoffee(coffeeType, amount)
         elif userInput == "report":
-            printReport()
-            continue
+            printReport() 
         userInput = input("What would you like? (espresso/latte/cappuccino): ").lower()
             
             
